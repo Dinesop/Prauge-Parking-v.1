@@ -56,3 +56,6 @@ Och vi kommer behöva en metod för
  - Söka efter ledig p plats
  - Utskrift av p-plats
  - Utskrift av p-hus. 
+
+Det är svårt att håkka koll på vilka problem man stött på när allt är ett problem man måste lösa, "hur funkade .ToUpper nu igen", "varför klagar VS på min string variabel" osv. 
+Men tycker ändå det går bra, försöker bryta ner det i mindre bitar tills det blir hanterbart. Vi kan nu lägga till bilar och parkera dom på en tom parkeringsplats var på programmet skriver ut vart den står. Det är ändå *framsteg*.
