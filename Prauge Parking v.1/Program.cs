@@ -1,15 +1,20 @@
 ﻿string[] parkingGarage = new string[100];
 
-//menyVal(menyDisplay());
+// menyVal(menyDisplay());
+// string fordon = läggaTillFordon();
+// parkeraBil(fordonID);
 
-//string fordon = läggaTillFordon();
 string fordon = "BIL#ABC123";
 
 /* Sortera fordon efter typ */
-//string[] fordon = input.Split('#');
-//if (fordon[0] == "BIL")
+string[] fordonID = fordon.Split('#');
+fordon.ToUpper();
+
+
+
+//if (fordon[0] "BIL")
 //{
-//    Console.WriteLine("Du angav bil");
+//    parkeraBil(fordonID);
 //}
 //else if (fordon[0] == "MC")
 //{
@@ -19,27 +24,23 @@ string fordon = "BIL#ABC123";
 //    Console.WriteLine("Ogiltligt fordon.");
 
 
-
-/* Hitta första lediga bil p-plats*/
-for (int i = 0; i < parkingGarage.Length; i++)
+void parkeraBil(string[] fordonID)
 {
-    if (string.IsNullOrEmpty(parkingGarage[i]))
+    for (int i = 0; i < parkingGarage.Length; i++)
     {
-        parkingGarage[i] = fordon;
-        break;
+        if (string.IsNullOrEmpty(parkingGarage[i]))
+        {
+            parkingGarage[i] = fordonID[1];
+            Console.WriteLine($"Bil med regnr {fordonID[1]} är parkerad på plats nr {i+1}");
+            break;
+        }
+        else
+        {
+            continue;
+        }
     }
-    else
-    {
-        continue;
-    }
+
 }
-
-
-
-
-
-
-
 string läggaTillFordon()
 {
     Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
