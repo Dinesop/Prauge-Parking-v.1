@@ -24,8 +24,9 @@ void parkeraBil(string[] fordonID)
     {
         if (string.IsNullOrEmpty(parkingGarage[i]))
         {
-            parkingGarage[i] = fordonID[1];
+            parkingGarage[i] = fordonID[0] + "#" + fordonID[1];
             Console.WriteLine($"Bil med regnr {fordonID[1]} är parkerad på plats nr {i+1}");
+            Console.WriteLine($"Hela p-platsen id är {parkingGarage[i]}");
             break;
         }
         else
