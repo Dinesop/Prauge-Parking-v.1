@@ -5,7 +5,8 @@ noterar du varje dag vad du har gjort i projektet. Du kan notera sådant som pro
 hur de löstes. Loggboken kommer att vara en del av din inlämning."*
 
 ## Logg
-### 21/9: 
+### 21/9:
+##### 08:00 ish:
 **Specifikation fasen**
 Börjar sätta upp projekt struktur och kolla på kravspec. 
 ### 29/9:
@@ -56,3 +57,12 @@ Och vi kommer behöva en metod för
  - Söka efter ledig p plats
  - Utskrift av p-plats
  - Utskrift av p-hus. 
+
+##### 13:00 ish:
+Det är svårt att hålla koll på vilka problem man stött på när allt är ett problem man måste lösa, "hur funkade .ToUpper nu igen", "varför klagar VS på min string variabel" osv. 
+Men tycker ändå det går bra, försöker bryta ner det i mindre bitar tills det blir hanterbart. Vi kan nu lägga till bilar och parkera dom på en tom parkeringsplats var på programmet skriver ut vart den står. Det är ändå *framsteg*.
+
+Ett exempel på problem jag just löste är att jag hade en strängvektor fordonID från min .Split av fordon och av någon anledning ville den inte köra på if(fordonID[0] == "MC"). Det visade sig att jag glömt byta namn på variabeln vid något tillfälle, så nu ska jag memorera ctrl+H för variabelnamn byte xD.
+
+##### 15 ish:
+Det hade varit så hjälpsamt om man kunde tillräckligt för att bygga ett flödesschema för detta programmet. Nu gäller det att hålla tungan rätt i mun! 
