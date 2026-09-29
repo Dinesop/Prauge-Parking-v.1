@@ -5,11 +5,11 @@ noterar du varje dag vad du har gjort i projektet. Du kan notera sådant som pro
 hur de löstes. Loggboken kommer att vara en del av din inlämning."*
 
 ## Logg
-### Specifikation fasen
-**21/9:** 
+### 21/9: 
+**Specifikation fasen**
 Börjar sätta upp projekt struktur och kolla på kravspec. 
-
-**29/9:** 
+### 29/9:
+**Specifikation fasen**
 Strukturera upp projektet, börja tänka på hur kodstrukturen ska se ut, definiera problemet. Min instinkt är att hoppa rakt in i design fasen men vet att det är bättre att göra en gedigen specifikation först. 
 Något jag tog med mig från C# the yellow book var hur man ska ta sig an problem:
 Specifying the problem
@@ -29,4 +29,19 @@ Programmet kommer berätta vilken p-plats som fordonet ska parkeras på, flyttas
 Systemet tar registreringsnumret och söker upp en p-plats. Beroende på om fordonet är nytt eller redan i systemet kan detta vara en ny p-plats eller en befintlig. 
 
 Detta är verkligen den mest basala versionen av vad programmet förväntas göra. IN: registreringsnummer, UT: p-plats.
+
+**Design fasen**
+Okej, så vi har ändå definierat problemet - regnr IN, p-plats UT. 
+För planering av lösningen testade jag att köra lite postits på ett papper, jag vet att jag tänker bäst på fysisk media även om jag tycker det är bökigt. 
+Men, menyn är ju det centrala för hela programmet med menyval
+1) Lägg till fordon
+2) Flytta fordon
+3) Hämta fordon
+4) Sök efter fordon
+
+Kollar man sedan vad varje enskilt menyval ska göra är det ju tillbaka till basen: regnr IN, p-plats UT med visa extra steg vid varje val:
+Menyval 1 ska lägga till fordonet i vektorn.
+Menyval 2 ska flytta fordonet till ett annat index.
+Menyval 3 ska ta bort fordonet ur vektorn.
+Menyval 4 ska visa vilken p-plats fordonet är parkerat på. 
 
