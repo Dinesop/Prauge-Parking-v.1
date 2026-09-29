@@ -2,7 +2,11 @@
 
 menyVal(menyDisplay());
 
-void sorteraFordon(string fordonInput)
+
+
+
+// ****************************** METODER ***************************************//
+void sorteraFordonsTyp(string fordonInput)
 {
     string[] fordonID = fordonInput.Split('#');
 
@@ -17,7 +21,6 @@ void sorteraFordon(string fordonInput)
     else
         Console.WriteLine("Ogiltligt fordonInput.");
 }
-
 void parkeraBil(string[] fordonID)
 {
     for (int i = 0; i < parkingGarage.Length; i++)
@@ -40,7 +43,7 @@ void läggaTillFordon()
 {
     Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
     string fordonInput = Console.ReadLine().ToUpper(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
-    sorteraFordon(fordonInput);
+    sorteraFordonsTyp(fordonInput);
 
 }
 void menyVal(int valdMenyPunkt)
