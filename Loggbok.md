@@ -45,3 +45,14 @@ Menyval 2 ska flytta fordonet till ett annat index.
 Menyval 3 ska ta bort fordonet ur vektorn.
 Menyval 4 ska visa vilken p-plats fordonet är parkerat på. 
 
+Uppgiften föreslår en vektor med längd 100 för att representera p-huset: `string[] parkingGarage = new string[100];`
+Och vi kommer behöva en metod för 
+ - utskrift av menyn
+ - Inläsning av menyval
+ - Lägga till ett fordon
+ - Ta bort ett fordon
+ - Flytta ett fordon som ropar på lägga till och ta bort metoderna
+ - Söka efter fordon
+ - Söka efter ledig p plats
+ - Utskrift av p-plats
+ - Utskrift av p-hus. 
