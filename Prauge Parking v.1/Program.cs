@@ -1,9 +1,51 @@
 ﻿string[] parkingGarage = new string[100];
 
+//menyVal(menyDisplay());
+
+//string fordon = läggaTillFordon();
+string fordon = "BIL#ABC123";
+
+/* Sortera fordon efter typ */
+//string[] fordon = input.Split('#');
+//if (fordon[0] == "BIL")
+//{
+//    Console.WriteLine("Du angav bil");
+//}
+//else if (fordon[0] == "MC")
+//{
+//    Console.WriteLine("Du angav mc");
+//}
+//else
+//    Console.WriteLine("Ogiltligt fordon.");
 
 
-menyVal(menyDisplay());
 
+/* Hitta första lediga bil p-plats*/
+for (int i = 0; i < parkingGarage.Length; i++)
+{
+    if (string.IsNullOrEmpty(parkingGarage[i]))
+    {
+        parkingGarage[i] = fordon;
+        break;
+    }
+    else
+    {
+        continue;
+    }
+}
+
+
+
+
+
+
+
+string läggaTillFordon()
+{
+    Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
+    string fordon = Console.ReadLine(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
+    return (fordon);
+}
 void menyVal(int valdMenyPunkt)
 {
     switch (valdMenyPunkt)
@@ -25,7 +67,6 @@ void menyVal(int valdMenyPunkt)
             break;
     }
 }
-
 int menyDisplay()
 {
     /// Menyn bygger på att vilkors operatorn ? : -> b ? x : y innebär att om b är sant händer x annars händer y. 
@@ -53,23 +94,3 @@ int menyDisplay()
     return (valdMenyPunkt);
 
 }
-
-void läggaTillFordon()
-{
-    Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
-    string input = Console.ReadLine(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
-
-    string[] fordon = input.Split('#');
-
-    if (fordon[0] == "BIL")
-    {
-        // Bil stuff
-    }
-    else if (fordon[0] == "MC")
-    {
-        // Mc stuff
-    }
-    else
-        Console.WriteLine("Ogiltligt fordon.");
-}
-
