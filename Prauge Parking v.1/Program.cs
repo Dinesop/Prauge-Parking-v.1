@@ -1,28 +1,22 @@
 ﻿string[] parkingGarage = new string[100];
 
-// menyVal(menyDisplay());
-// string fordon = läggaTillFordon();
-// parkeraBil(fordonID);
+menyVal(menyDisplay());
 
-string fordon = "BIL#ABC123";
+void sorteraFordon(string fordonInput)
+{
+    string[] fordonID = fordonInput.Split('#');
 
-/* Sortera fordon efter typ */
-string[] fordonID = fordon.Split('#');
-fordon.ToUpper();
-
-
-
-//if (fordon[0] "BIL")
-//{
-//    parkeraBil(fordonID);
-//}
-//else if (fordon[0] == "MC")
-//{
-//    Console.WriteLine("Du angav mc");
-//}
-//else
-//    Console.WriteLine("Ogiltligt fordon.");
-
+    if (fordonID[0] == "BIL")
+    {
+        parkeraBil(fordonID);
+    }
+    else if (fordonID[0] == "MC")
+    {
+        Console.WriteLine("Du angav mc");
+    }
+    else
+        Console.WriteLine("Ogiltligt fordonInput.");
+}
 
 void parkeraBil(string[] fordonID)
 {
@@ -41,18 +35,19 @@ void parkeraBil(string[] fordonID)
     }
 
 }
-string läggaTillFordon()
+void läggaTillFordon()
 {
     Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
-    string fordon = Console.ReadLine(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
-    return (fordon);
+    string fordonInput = Console.ReadLine().ToUpper(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
+    sorteraFordon(fordonInput);
+
 }
 void menyVal(int valdMenyPunkt)
 {
     switch (valdMenyPunkt)
     {
         case 1:
-            Console.WriteLine("Lägg till fordon");
+            läggaTillFordon();
             break;
 
         case 2:
@@ -78,7 +73,7 @@ int menyDisplay()
     while (true)
     {
         Console.Clear();
-        Console.WriteLine("Använd piltangenterna (Upp/Ned) och tryck sedan på Enter:\n\n");
+        Console.WriteLine("Använd piltangenterna (Upp/Ned) och tryck sedan på Enter:");
         Console.WriteLine(valdMenyPunkt == 1 ? "> Lägg till fordon" : "  Lägg till fordon");
         Console.WriteLine(valdMenyPunkt == 2 ? "> Flytta fordon" : "  Flytta fordon");
         Console.WriteLine(valdMenyPunkt == 3 ? "> Hämta fordon" : "  Hämta fordon");
