@@ -1,4 +1,6 @@
-﻿string[] parkingGarage = new string[100];
+﻿using System.Text.RegularExpressions;
+
+string[] parkingGarage = new string[100];
 
 menyVal(menyDisplay());
 
@@ -16,10 +18,38 @@ void sorteraFordonsTyp(string fordonInput)
     }
     else if (fordonID[0] == "MC")
     {
-        Console.WriteLine("Du angav mc");
+        parkeraMc(fordonID);
     }
     else
-        Console.WriteLine("Ogiltligt fordonInput.");
+        Console.WriteLine("Ogiltligt fordon.");
+}
+void parkeraMc(string[] fordonID)
+{
+    for (int i = 0; i < parkingGarage.Length; i++)
+    {
+        if (string.IsNullOrEmpty(parkingGarage[i])) // Kollar om p-plats [i] är tom. Detta för att undvika null krashar.
+        {
+            parkingGarage[i] = fordonID[0] + "#" + fordonID[1];
+            Console.WriteLine($"Mc med regnr {fordonID[1]} är parkerad på plats nr {i + 1}");
+            Console.WriteLine($"Hela p-platsen id är {parkingGarage[i]}");
+            break;
+        }
+        else if (parkingGarage[i].Contains("MC")) //Kollar om p-plats [i] innehåller en MC
+        {
+            if (Regex.IsMatch(parkingGarage[i], "^[^|]*$")) // Kollar om p-plats [i] inte innehåller 2 MC
+            {
+                parkingGarage[i] = parkingGarage[i] + "|" + fordonID[0] + "#" + fordonID[1];
+                Console.WriteLine($"Mc med regnr {fordonID[1]} är parkerad på plats nr {i + 1}");
+                Console.WriteLine($"Hela p-platsen id är {parkingGarage[i]}");
+                break;
+            }
+        }
+        else
+        {
+            continue;
+        }
+    }
+    menyVal(menyDisplay());
 }
 void parkeraBil(string[] fordonID)
 {
@@ -29,7 +59,6 @@ void parkeraBil(string[] fordonID)
         {
             parkingGarage[i] = fordonID[0] + "#" + fordonID[1];
             Console.WriteLine($"Bil med regnr {fordonID[1]} är parkerad på plats nr {i+1}");
-            Console.WriteLine($"Hela p-platsen id är {parkingGarage[i]}");
             break;
         }
         else
@@ -37,10 +66,11 @@ void parkeraBil(string[] fordonID)
             continue;
         }
     }
-
+    menyVal(menyDisplay());
 }
 void läggaTillFordon()
 {
+    Console.WriteLine();
     Console.WriteLine("Ange fordonstyp följt av registrering nummret på formen BIL#ABC123 alt. MC#ABC123:");
     string fordonInput = Console.ReadLine().ToUpper(); // Här hade jag velat ha någon form av spärr för om man inte matar in ett korrekt format.
     sorteraFordonsTyp(fordonInput);
@@ -76,7 +106,7 @@ int menyDisplay()
 
     while (true)
     {
-        Console.Clear();
+        Console.WriteLine();
         Console.WriteLine("Använd piltangenterna (Upp/Ned) och tryck sedan på Enter:");
         Console.WriteLine(valdMenyPunkt == 1 ? "> Lägg till fordon" : "  Lägg till fordon");
         Console.WriteLine(valdMenyPunkt == 2 ? "> Flytta fordon" : "  Flytta fordon");
