@@ -69,3 +69,5 @@ Det hade varit så hjälpsamt om man kunde tillräckligt för att bygga ett flö
 
 ### 30/9
 Börjat sätta upp parkera mc metoden. Min plan var att den skulle kolla om det redan stod en mc på platsen if (parkingGarage[i].StartsWith("MC")) och om den inte hade en till MC redan:  && Regex.IsMatch(parkingGarage[i], "^[^|]*$") men det leder ju till att programmet krashar vid första tomma cell då parkingGarage[i] är null. Så det funkar ju inte. Men nu när jag skriver ner det inser jag att det borde gå att lösa med en nästlad if sats... 
+Jag fick det inte att funka med en nästlad if sats. Den hanterar inte att elementet är null. Men om jag lägger null statsen först kan man väl inte parkera två MCs på samma plats... eller?
+Okej, det var verkligen så enkelt. Är det något jag lärt mig av den här uppgiften så är det att formulera sina tankar antingen till en kodanka eller till en loggbok gör problemlösningen mycket lättare.
