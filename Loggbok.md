@@ -10,6 +10,7 @@ hur de löstes. Loggboken kommer att vara en del av din inlämning."*
 **Specifikation fasen**
 Börjar sätta upp projekt struktur och kolla på kravspec. 
 ### 29/9:
+##### Morgon
 **Specifikation fasen**
 Strukturera upp projektet, börja tänka på hur kodstrukturen ska se ut, definiera problemet. Min instinkt är att hoppa rakt in i design fasen men vet att det är bättre att göra en gedigen specifikation först. 
 Något jag tog med mig från C# the yellow book var hur man ska ta sig an problem:
@@ -58,18 +59,20 @@ Och vi kommer behöva en metod för
  - Utskrift av p-plats
  - Utskrift av p-hus. 
 
-##### 13:00 ish:
+##### Lunch tid
 Det är svårt att hålla koll på vilka problem man stött på när allt är ett problem man måste lösa, "hur funkade .ToUpper nu igen", "varför klagar VS på min string variabel" osv. 
 Men tycker ändå det går bra, försöker bryta ner det i mindre bitar tills det blir hanterbart. Vi kan nu lägga till bilar och parkera dom på en tom parkeringsplats var på programmet skriver ut vart den står. Det är ändå *framsteg*.
 
 Ett exempel på problem jag just löste är att jag hade en strängvektor fordonID från min .Split av fordon och av någon anledning ville den inte köra på if(fordonID[0] == "MC"). Det visade sig att jag glömt byta namn på variabeln vid något tillfälle, så nu ska jag memorera ctrl+H för variabelnamn byte xD.
 
-##### 15 ish:
+##### Eftermiddag
 Det hade varit så hjälpsamt om man kunde tillräckligt för att bygga ett flödesschema för detta programmet. Nu gäller det att hålla tungan rätt i mun! 
 
 ### 30/9
+##### Morgon
 Börjat sätta upp parkera mc metoden. Min plan var att den skulle kolla om det redan stod en mc på platsen if (parkingGarage[i].StartsWith("MC")) och om den inte hade en till MC redan:  && Regex.IsMatch(parkingGarage[i], "^[^|]*$") men det leder ju till att programmet krashar vid första tomma cell då parkingGarage[i] är null. Så det funkar ju inte. Men nu när jag skriver ner det inser jag att det borde gå att lösa med en nästlad if sats... 
 
+##### Eftermiddag
 Jag fick det inte att funka med en nästlad if sats. Den hanterar inte att elementet är null. Men om jag lägger null statsen först kan man väl inte parkera två MCs på samma plats... eller?
 Okej, det var verkligen så enkelt. Är det något jag lärt mig av den här uppgiften så är det att formulera sina tankar antingen till en kodanka eller till en loggbok gör problemlösningen mycket lättare.
 
