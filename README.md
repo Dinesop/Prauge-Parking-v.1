@@ -4,11 +4,11 @@ Bygg en applikation som hanterar bilar och motorcyklar.
 **Systemet behöver inte kunna spara bilar över natten. När programmet avslutas raderas all data.**
 
 ### Krav på systemet
- - [] Ta emot fordon.
- - [] Tala om vilken parkeringsplats fordonet ska parkeras på.
- - [] Manuellt flytta fordon.
- - [] Hämta ut fordon och ta bort det ur systemet.
- - [] Söka efter fordon.
+ - [x] Ta emot fordon.
+ - [x] Tala om vilken parkeringsplats fordonet ska parkeras på.
+ - [x] Manuellt flytta fordon.
+ - [x] Hämta ut fordon och ta bort det ur systemet.
+ - [x] Söka efter fordon.
 
 Systemet ska vara en textbaserad meny.
 
@@ -22,9 +22,18 @@ Systemet ska vara en textbaserad meny.
 **OBS glöm inte att testköra på en annan dator!**
 
 ### För VG 
-*(utöka denna sektion om det blir relevant.)*
-Två av följande ska göras + lite extra saker, se pdf.
- - Visualisera vad som finns på parkeringsplatsen
- - Skapa en optimeringrutin
- - Säkra upp användarinput
+Två av följande ska göras:
+ - Visualisera vad som finns på parkeringsplatsen.
+ - Skapa en optimeringrutin.
+ - Säkra upp användarinput.
  - Utöka lagringsformatet.
+
+##### Personlig reflektion 
+Skapa en personlig reflektion över kursen och projektet på ca 3 sidor. 
+1. Sammanfattning
+2. Hur jag löste uppgiften
+3. Utmaningar i uppgiften och hur de löstes
+4. Metoder och modeller som använts för att lösa uppgiften
+5. Hur du skulle lösa uppgiften nästa gång, givet vad du vet nu
+6. Slutsats hemuppgift
+7. Slutsats kurs, så här långt
