@@ -80,3 +80,10 @@ Fick löst en sökfunktion och att man kan hämta ut fordon. Nu är det bara fly
 
 ### 1/10
 Började med att försöka bygga en manuell flyttfunktion och började plocka isär hämta ut fordon funktionen eftersom de kommer vara väldigt lika och det borde gå att dela upp dom så jag inte behöver använda samma kod på flera ställen utan bara kan kalla på en metod. Men det gick dåligt, det är svårt att få överblick, så slängde allt och byggde de separat för tillfället. Bättre att bygga något som fungerar än något som är optimerat men inte funkar. 
+Jag trodde jag var klar med allt, men icke. Eftersom min sökfunktion bryter vid första tomma cellen i vektorn, blir det knas om man flyttar ett fordon så det finns tomma platser. Det funkar ju inte, för tomma platser kan ju alltid förekomma mellan parkerade bilar...
+Jag har haft att den retunerar ett felmeddelande om den stöter på en tom plats, men hoppas att lösningen är så enkel som att be den att continue istället. 
+Det var inte så enkelt men var simplet nog att lösa. 
+Och nu funkar allt.
+Är det snyggt - nej, men det funkar. 
+Jag ska också testa på någon annan dator. 
+
