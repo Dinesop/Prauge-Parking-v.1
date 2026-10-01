@@ -4,11 +4,11 @@ Bygg en applikation som hanterar bilar och motorcyklar.
 **Systemet behöver inte kunna spara bilar över natten. När programmet avslutas raderas all data.**
 
 ### Krav på systemet
- - Ta emot fordon.
- - Tala om vilken parkeringsplats fordonet ska parkeras på.
- - Manuellt flytta fordon.
- - Hämta ut fordon och ta bort det ur systemet.
- - Söka efter fordon.
+ - [] Ta emot fordon.
+ - [] Tala om vilken parkeringsplats fordonet ska parkeras på.
+ - [] Manuellt flytta fordon.
+ - [] Hämta ut fordon och ta bort det ur systemet.
+ - [] Söka efter fordon.
 
 Systemet ska vara en textbaserad meny.
 
