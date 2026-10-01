@@ -77,3 +77,6 @@ Jag fick det inte att funka med en nästlad if sats. Den hanterar inte att eleme
 Okej, det var verkligen så enkelt. Är det något jag lärt mig av den här uppgiften så är det att formulera sina tankar antingen till en kodanka eller till en loggbok gör problemlösningen mycket lättare.
 
 Fick löst en sökfunktion och att man kan hämta ut fordon. Nu är det bara flytta fordon kvar att hammra ut, det känns som den bygger mycket på hämta ut och söka så borde gå ganska lätt...?
+
+### 1/10
+Började med att försöka bygga en manuell flyttfunktion och började plocka isär hämta ut fordon funktionen eftersom de kommer vara väldigt lika och det borde gå att dela upp dom så jag inte behöver använda samma kod på flera ställen utan bara kan kalla på en metod. Men det gick dåligt, det är svårt att få överblick, så slängde allt och byggde de separat för tillfället. Bättre att bygga något som fungerar än något som är optimerat men inte funkar. 
