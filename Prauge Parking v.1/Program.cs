@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Numerics;
+using System.Text.RegularExpressions;
 
 string[] parkingGarage = new string[100];
 parkingGarage[0] = "BIL#ABC123";
@@ -7,9 +8,59 @@ parkingGarage[2] = "MC#RTY678|MC#TYU456";
 parkingGarage[3] = "BIL#FGH456";
 parkingGarage[4] = "MC#BCD234";
 
+
+
+
 menyVal(menyDisplay());
 
 // ****************************** METODER ***************************************//
+void flyttaFordon()
+{
+    string input = taEmotRegNr();
+    int i = sökaFordon(input);
+    if (i == 1001)
+    {
+        Console.WriteLine("Tyvärr finns inte fordonet i vårt system, kontrollera angivet registeringsnummer.");
+    }
+    else
+    {
+        int platsIndex = angePPlats();
+        Console.WriteLine($"Fordon {input} står på plats {i + 1}, och flyttas nu till p-plats {platsIndex + 1}");
+
+        if (Regex.IsMatch(parkingGarage[i], "^[^|]*$"))
+        {
+            parkingGarage[platsIndex] = parkingGarage[i];
+            parkingGarage[i] = "";
+        }
+        else
+        {
+            string pPlats = parkingGarage[i];
+            string[] mcParking = pPlats.Split('|');
+            foreach (var item in mcParking)
+            {
+                if (item.Contains(input))
+                {
+                    parkingGarage[platsIndex] = item;
+                }
+                if (!item.Contains(input))
+                {
+                    parkingGarage[i] = item;
+                }
+            }
+        }
+    }
+    Console.WriteLine();
+    Console.Write("\n\nTryck på valfri tangent för att återgå till huvudmenyn.");
+    Console.ReadKey();
+    menyVal(menyDisplay());
+}
+int angePPlats()
+{ // Ber användaren ange registreringsnummer på det fordon som eftersöks.
+
+    Console.WriteLine("Ange nummer på p-platsen du vill flytta fordonet till:");
+    int.TryParse(Console.ReadLine(), out int platsIndex);
+    return (platsIndex-1);
+}
 void hämtaUtFordon()
 { //Ber användare om regNr via "taEmotRegNr" och sedan söker reda på vektor index via "sökaFordon"
   //för att sedan ange vart fordonet kan hämtas och ta bort det ur systemet. 
@@ -42,6 +93,10 @@ void hämtaUtFordon()
         }
 
     }
+    Console.WriteLine();
+    Console.Write("\n\nTryck på valfri tangent för att återgå till huvudmenyn.");
+    Console.ReadKey();
+    menyVal(menyDisplay());
 }
 string taEmotRegNr()
 { // Ber användaren ange registreringsnummer på det fordon som eftersöks.
@@ -56,7 +111,7 @@ int sökaFordon(string input)
     for (int i = 0; i < parkingGarage.Length; i++)
     {
         if (string.IsNullOrEmpty(parkingGarage[i]))
-            return (1001);
+            continue;
 
         else if (parkingGarage[i].Contains(input))
         {
@@ -80,6 +135,7 @@ void sorteraFordonsTyp(string fordonInput)
     }
     else
         Console.WriteLine("Ogiltligt fordon.");
+        läggaTillFordon();
 }
 void parkeraMc(string[] fordonID)
 { // Letar upp första bästa parkeringsplats för en MC, antingen en tom p-plats eller en p-plats där endast en MC står parkerad.
@@ -108,6 +164,9 @@ void parkeraMc(string[] fordonID)
             continue;
         }
     }
+    Console.WriteLine();
+    Console.Write("\n\nTryck på valfri tangent för att återgå till huvudmenyn.");
+    Console.ReadKey();
     menyVal(menyDisplay());
 }
 void parkeraBil(string[] fordonID)
@@ -126,6 +185,11 @@ void parkeraBil(string[] fordonID)
             continue;
         }
     }
+
+    Console.WriteLine();
+    Console.Write("\n\nTryck på valfri tangent för att återgå till huvudmenyn.");
+    Console.ReadKey();
+
     menyVal(menyDisplay());
 }
 void läggaTillFordon()
@@ -146,7 +210,7 @@ void menyVal(int valdMenyPunkt)
             break;
 
         case 2:
-            Console.WriteLine("Flytta fordon");
+            flyttaFordon();
             break;
 
         case 3:
@@ -156,7 +220,19 @@ void menyVal(int valdMenyPunkt)
         case 4:
             string input = taEmotRegNr();
             int i = sökaFordon(input);
-            Console.WriteLine($"Fordonet du söker står på plats {i + 1}");
+            if (i == 1001)
+            {
+                Console.WriteLine("Tyvärr finns inte fordonet i vårt system, kontrollera angivet registeringsnummer.");
+            }
+            else
+            {
+                Console.WriteLine($"Fordonet du söker står på plats {i + 1}");
+            }
+
+            Console.WriteLine();
+            Console.Write("\n\nTryck på valfri tangent för att återgå till huvudmenyn.");
+            Console.ReadKey();
+            menyVal(menyDisplay());
             break;
     }
 }
@@ -166,10 +242,9 @@ int menyDisplay()
   // eftersom att vi ovan states that om vald menypunkt är == 1, 2 eller 3 så har de en pil framför sig.
 
     int valdMenyPunkt = 1;
-
     while (true)
     {
-        Console.WriteLine();
+        Console.Clear();
         Console.WriteLine("Använd piltangenterna (Upp/Ned) och tryck sedan på Enter:");
         Console.WriteLine(valdMenyPunkt == 1 ? "> Lägg till fordon" : "  Lägg till fordon");
         Console.WriteLine(valdMenyPunkt == 2 ? "> Flytta fordon" : "  Flytta fordon");
