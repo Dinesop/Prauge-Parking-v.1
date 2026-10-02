@@ -25,7 +25,7 @@ Systemet ska vara en textbaserad meny.
 Två av följande ska göras:
  - [ ] Visualisera vad som finns på parkeringsplatsen.
  - [x] Skapa en optimeringrutin.
- - [ ] Säkra upp användarinput.
+ - [x] Säkra upp användarinput.
  - [ ] Utöka lagringsformatet.
 
 ##### Personlig reflektion 
