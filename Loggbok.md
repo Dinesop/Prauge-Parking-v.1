@@ -87,3 +87,20 @@ Och nu funkar allt.
 Är det snyggt - nej, men det funkar. 
 Jag ska också testa på någon annan dator. 
 
+### 2/10
+Suttit och funderat på visualisering och testat lite olika delar av spectre.console. 
+Snackade med Linnea med och insåg att jag glömt hantera ett fullt p-hus, så det är gjort nu.
+
+***Hade också velat ha något som haffar identiska regnr...***
+Tankar om optimeringsrutin:
+Jag skulle vilja ha en lista som man lägger till indexen för singelparkerade mcs i. sen när man har kollat igenom hela phuset så kollar man listan bakifrån och flyttar ihop med första elementet i listan. det blir dock bökigt med ojämt antal singelparkerade mcs. och mycket loopar
+om man istället tar första singelmcn och parkerar ihop den med andra singel mcs känns det som det blir en effektivare metod?
+Men hur gör jag det egentligen? 
+Nu har jag lagt in en räknare counter som räknar upp till 2 och sen händer ett optimeringsevent. Man skulle ju antingen kunna nollställa countern isf efter eventet eller ha att varje gång counter % 2 == 0 så sker eventet. Vad är skillnaden?
+Nu var det enklare i just detta fall att nollställa räknaren så det var så det fick bli.
+
+Nu ska vi justera användarinput. Undrar vilken nivå vi ska ligga på... basic är ju enkelt, men det är ju ändå VG, man kanske ska göra det lite snyggare ändå...
+Jag tror jag är klar med det men, men svårt att komma på scenarion att testa för... det känns robust men det känns naivt att tro att det är det.
+Testade runt och behöver säkra upp för om man vill flytta till en p-plats som inte är tom - löst.
+
+Okej, jag har en fungerande visualisering, jag vill bara fixa så kolumnbredden blir bra, men den begränsande faktorn nu verkar vara fönster bredden på konsolfönstret så det blir nästa sak att tackla. 
