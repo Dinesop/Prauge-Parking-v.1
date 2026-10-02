@@ -2,13 +2,108 @@
 using System.Text.RegularExpressions;
 
 string[] parkingGarage = new string[100];
-parkingGarage[0] = "BIL#ABC123";
-parkingGarage[1] = "BIL#ABC321";
-parkingGarage[2] = "MC#RTY678|MC#TYU456";
-parkingGarage[3] = "BIL#FGH456";
-parkingGarage[4] = "MC#BCD234";
-
-
+# region parkerade bilar
+parkingGarage[0] = "BIL#AHF768";
+parkingGarage[1] = "BIL#KAF501";
+parkingGarage[2] = "BIL#OFP808";
+parkingGarage[3] = "MC#IEY300";
+parkingGarage[4] = "MC#PUS593|MC#OVQ857";
+parkingGarage[5] = "BIL#FHC212";
+parkingGarage[6] = "BIL#JJF296";
+parkingGarage[7] = "BIL#ESE396";
+parkingGarage[8] = "BIL#RVU203";
+parkingGarage[9] = "BIL#FYW363";
+parkingGarage[10] = "";
+parkingGarage[11] = "BIL#GGO258";
+parkingGarage[12] = "BIL#FZN001";
+parkingGarage[13] = "BIL#UKB395";
+parkingGarage[14] = "";
+parkingGarage[15] = "MC#ASR526|MC#CLL982";
+parkingGarage[16] = "BIL#EXW266";
+parkingGarage[17] = "BIL#TOU503";
+parkingGarage[18] = "BIL#YWV308";
+parkingGarage[19] = "";
+parkingGarage[20] = "BIL#MBT714";
+parkingGarage[21] = "BIL#GWL257";
+parkingGarage[22] = "BIL#IZQ451";
+parkingGarage[23] = "BIL#IPF206";
+parkingGarage[24] = "BIL#XWB262";
+parkingGarage[25] = "BIL#YOM781";
+parkingGarage[26] = "BIL#LLM769";
+parkingGarage[27] = "BIL#KIW214";
+parkingGarage[28] = "BIL#HGY485";
+parkingGarage[29] = "BIL#ZVZ981";
+parkingGarage[30] = "BIL#FKB392";
+parkingGarage[31] = "MC#LKY957";
+parkingGarage[32] = "BIL#HZP570";
+parkingGarage[33] = "BIL#NWE901";
+parkingGarage[34] = "BIL#RGD825";
+parkingGarage[35] = "BIL#KPN927";
+parkingGarage[36] = "BIL#KRH370";
+parkingGarage[37] = "BIL#ZZB229";
+parkingGarage[38] = "MC#WJE876|MC#ZRA826";
+parkingGarage[39] = "";
+parkingGarage[40] = "BIL#DCO267";
+parkingGarage[41] = "BIL#QGM980";
+parkingGarage[42] = "BIL#HAU627";
+parkingGarage[43] = "BIL#LAB895";
+parkingGarage[44] = "MC#PDD387|MC#WXF217";
+parkingGarage[45] = "MC#KQE989|MC#VWA739";
+parkingGarage[46] = "MC#WVG718|MC#WFV437";
+parkingGarage[47] = "BIL#AFI892";
+parkingGarage[48] = "BIL#KZN919";
+parkingGarage[49] = "BIL#ZGC473";
+parkingGarage[50] = "BIL#NKO270";
+parkingGarage[51] = "";
+parkingGarage[52] = "BIL#STR306";
+parkingGarage[53] = "BIL#IWS334";
+parkingGarage[54] = "BIL#HDK969";
+parkingGarage[55] = "BIL#HOA245";
+parkingGarage[56] = "MC#MLF497";
+parkingGarage[57] = "BIL#CNQ387";
+parkingGarage[58] = "MC#FFA248";
+parkingGarage[59] = "BIL#KQF642";
+parkingGarage[60] = "MC#ATU141";
+parkingGarage[61] = "";
+parkingGarage[62] = "BIL#BGW486";
+parkingGarage[63] = "";
+parkingGarage[64] = "BIL#YXP758";
+parkingGarage[65] = "BIL#XTM226";
+parkingGarage[66] = "MC#NQH022";
+parkingGarage[67] = "BIL#ODG670";
+parkingGarage[68] = "BIL#OKF495";
+parkingGarage[69] = "MC#WTJ037";
+parkingGarage[70] = "MC#YKT562|MC#FLA364";
+parkingGarage[71] = "BIL#MDQ035";
+parkingGarage[72] = "BIL#QDM032";
+parkingGarage[73] = "BIL#TJT820";
+parkingGarage[74] = "BIL#OZJ676";
+parkingGarage[75] = "MC#YFA116";
+parkingGarage[76] = "BIL#FST167";
+parkingGarage[77] = "BIL#VZC036";
+parkingGarage[78] = "";
+parkingGarage[79] = "BIL#SBR617";
+parkingGarage[80] = "MC#PDZ734|MC#JNI881";
+parkingGarage[81] = "";
+parkingGarage[82] = "BIL#VSL792";
+parkingGarage[83] = "MC#NML728|MC#VCW246";
+parkingGarage[84] = "BIL#AWE273";
+parkingGarage[85] = "MC#SHA907|MC#MTR647";
+parkingGarage[86] = "BIL#FRH545";
+parkingGarage[87] = "BIL#TIS221";
+parkingGarage[88] = "BIL#DNT124";
+parkingGarage[89] = "MC#ZNH112";
+parkingGarage[90] = "BIL#ANH956";
+parkingGarage[91] = "BIL#WMW544";
+parkingGarage[92] = "BIL#BYM840";
+parkingGarage[93] = "BIL#BDO391";
+parkingGarage[94] = "MC#PUF544";
+parkingGarage[95] = "MC#ZHQ679|MC#FFR110";
+parkingGarage[96] = "BIL#LPH277";
+parkingGarage[97] = "BIL#RYU669";
+parkingGarage[98] = "BIL#OQX801";
+parkingGarage[99] = "BIL#TOH166";
+#endregion
 
 
 menyVal(menyDisplay());
@@ -159,6 +254,10 @@ void parkeraMc(string[] fordonID)
                 break;
             }
         }
+        else if (i == parkingGarage.Length - 1)
+        {
+            Console.WriteLine("Tyvärr finns det inga lediga p-platser.");
+        }
         else
         {
             continue;
@@ -179,6 +278,10 @@ void parkeraBil(string[] fordonID)
             parkingGarage[i] = fordonID[0] + "#" + fordonID[1];
             Console.WriteLine($"Bil med regnr {fordonID[1]} är parkerad på plats nr {i+1}");
             break;
+        }
+        else if (i == parkingGarage.Length - 1)
+        {
+            Console.WriteLine("Tyvärr finns det inga lediga p-platser.");
         }
         else
         {
