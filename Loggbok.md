@@ -104,3 +104,12 @@ Jag tror jag är klar med det men, men svårt att komma på scenarion att testa 
 Testade runt och behöver säkra upp för om man vill flytta till en p-plats som inte är tom - löst.
 
 Okej, jag har en fungerande visualisering, jag vill bara fixa så kolumnbredden blir bra, men den begränsande faktorn nu verkar vara fönster bredden på konsolfönstret så det blir nästa sak att tackla. 
+
+### 3/10
+##### Morgon
+Okej så idag fortsatte jag att fibbla med visualiseringen och testade lite färgläggningar på tabellen Men kände att jag fortfarande egentligen vill ha lådor i tabell lådorna kollade runt lite igen och återgick till bar shark som jag tittade på innan och testade att stoppa ett bar chart i en tabell element det funkade känns som en optimal lösning - nej men jag jobbar med det jag har.
+##### Eftermiddag
+Försökte byta till grid istället för table för att kunna komma runt att man inte får ha bar charts i kolumnrubriken men det ledde till nya problem istället.  
+Okej, googlade runt och försökte hitta något annat sätt att visa tabell data i C# men hittade inget på rak arm. Ska försöka igen imorgon kanske, men det ser ändå fint ut, även om jag stör mig till tusen på att jag måste ha en kolum rubrik rad högst upp. Oavsett, jag vill även fixa att den skriver ut en liten rapport efter tabellen så släpper tabellen för tillfället och går vidare.  
+Och det var ändå enkelt löst. Får se om jag orkar presentera det snyggare än text rakt upp och ned. 
+Det blir nog efter jag löst tidsstämplingen.
