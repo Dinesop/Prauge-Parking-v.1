@@ -125,3 +125,4 @@ Såg över min kommentering av koden och förbättrade det lite. Och ser nu hur 
  - Bygg in en avsluta knapp direkt, du vet att du kommer vilja ha en.
  - Något som haffar identiska regnr
  - Ett digitalt flödesschema som uppdateras under projektets gång.
+ - Kolla efter hårdkodade värden och ändra så allt är på formen .Lenght, .GetLength etc samt att undvika hårdkodade variabel storlekar.
