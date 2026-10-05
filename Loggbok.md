@@ -124,3 +124,4 @@ Såg över min kommentering av koden och förbättrade det lite. Och ser nu hur 
  - Skriv loggbok eller prata med en kodanka
  - Bygg in en avsluta knapp direkt, du vet att du kommer vilja ha en.
  - Något som haffar identiska regnr
+ - Ett digitalt flödesschema som uppdateras under projektets gång.
