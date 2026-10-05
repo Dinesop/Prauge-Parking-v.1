@@ -63,7 +63,7 @@ Och vi kommer behöva en metod för
 Det är svårt att hålla koll på vilka problem man stött på när allt är ett problem man måste lösa, "hur funkade .ToUpper nu igen", "varför klagar VS på min string variabel" osv. 
 Men tycker ändå det går bra, försöker bryta ner det i mindre bitar tills det blir hanterbart. Vi kan nu lägga till bilar och parkera dom på en tom parkeringsplats var på programmet skriver ut vart den står. Det är ändå *framsteg*.
 
-Ett exempel på problem jag just löste är att jag hade en strängvektor fordonID från min .Split av fordon och av någon anledning ville den inte köra på if(fordonID[0] == "MC"). Det visade sig att jag glömt byta namn på variabeln vid något tillfälle, så nu ska jag memorera ctrl+H för variabelnamn byte xD.
+Ett exempel på problem jag just löste är att jag hade en strängvektor fordonID från min .Split av fordon och av någon anledning ville den inte köra på if(fordonID[0] == "MC"). Det visade sig att jag glömt byta namn på variabeln vid något tillfälle, så nu ska jag memorera ctrl+H för variabelnamn byte.
 
 ##### Eftermiddag
 Det hade varit så hjälpsamt om man kunde tillräckligt för att bygga ett flödesschema för detta programmet. Nu gäller det att hålla tungan rätt i mun! 
@@ -91,7 +91,8 @@ Jag ska också testa på någon annan dator.
 Suttit och funderat på visualisering och testat lite olika delar av spectre.console. 
 Snackade med Linnea med och insåg att jag glömt hantera ett fullt p-hus, så det är gjort nu.
 
-***Hade också velat ha något som haffar identiska regnr...***
+Hade också velat ha något som haffar identiska regnr...
+
 Tankar om optimeringsrutin:
 Jag skulle vilja ha en lista som man lägger till indexen för singelparkerade mcs i. sen när man har kollat igenom hela phuset så kollar man listan bakifrån och flyttar ihop med första elementet i listan. det blir dock bökigt med ojämt antal singelparkerade mcs. och mycket loopar
 om man istället tar första singelmcn och parkerar ihop den med andra singel mcs känns det som det blir en effektivare metod?
@@ -107,9 +108,19 @@ Okej, jag har en fungerande visualisering, jag vill bara fixa så kolumnbredden 
 
 ### 3/10
 ##### Morgon
-Okej så idag fortsatte jag att fibbla med visualiseringen och testade lite färgläggningar på tabellen Men kände att jag fortfarande egentligen vill ha lådor i tabell lådorna kollade runt lite igen och återgick till bar shark som jag tittade på innan och testade att stoppa ett bar chart i en tabell element det funkade känns som en optimal lösning - nej men jag jobbar med det jag har.
+Okej så idag fortsatte jag att fibbla med visualiseringen och testade lite färgläggningar på tabellen Men kände att jag fortfarande egentligen vill ha lådor i tabell lådorna kollade runt lite igen och återgick till bar chart som jag tittade på innan och testade att stoppa ett bar chart i en tabell element det funkade känns som en optimal lösning - nej men jag jobbar med det jag har.
 ##### Eftermiddag
 Försökte byta till grid istället för table för att kunna komma runt att man inte får ha bar charts i kolumnrubriken men det ledde till nya problem istället.  
 Okej, googlade runt och försökte hitta något annat sätt att visa tabell data i C# men hittade inget på rak arm. Ska försöka igen imorgon kanske, men det ser ändå fint ut, även om jag stör mig till tusen på att jag måste ha en kolum rubrik rad högst upp. Oavsett, jag vill även fixa att den skriver ut en liten rapport efter tabellen så släpper tabellen för tillfället och går vidare.  
 Och det var ändå enkelt löst. Får se om jag orkar presentera det snyggare än text rakt upp och ned. 
 Det blir nog efter jag löst tidsstämplingen.
+
+### 5/10
+Såg över min kommentering av koden och förbättrade det lite. Och ser nu hur jag skulle kunna bryta isär alla mina funktioner och göra så all utskrift sker i en separat funktion som bygger på en switch meny. Jag lägger det till högen av saker jag gör om jag hinner, annars får jag ta med det till nästa program. 
+
+## Att göra om tid / lärdomar till nästa gång:
+ - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
+ - ctrl+H för variabelnamn byte
+ - Skriv loggbok eller prata med en kodanka
+ - Bygg in en avsluta knapp direkt, du vet att du kommer vilja ha en.
+ - Något som haffar identiska regnr
