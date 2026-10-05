@@ -116,7 +116,11 @@ Och det var ändå enkelt löst. Får se om jag orkar presentera det snyggare ä
 Det blir nog efter jag löst tidsstämplingen.
 
 ### 5/10
+##### Morgon
 Såg över min kommentering av koden och förbättrade det lite. Och ser nu hur jag skulle kunna bryta isär alla mina funktioner och göra så all utskrift sker i en separat funktion som bygger på en switch meny. Jag lägger det till högen av saker jag gör om jag hinner, annars får jag ta med det till nästa program. 
+
+##### Kväll
+Alltså, herregud. Sitter och ska lägga till tidsstämpel och bland det första jag skrev i projektet var ju metod för att lägga till fordon och sortera fordon och nu när jag tittar på det igen så är det bara att skaka på huvudet åt mig själv. Varför har jag tagit en sträng och sen delat den? Eller ja, jag vet varför, tänkte inte på Contains eller RegEx.IsMatch då och det står som tips i instruktionen att .Split eller .Join var användbart så hade det lättillgängligt. Men det känns ju omständigt så här i efterhand... Samtidigt, var det behändigt nu när jag skulle implementera datum och tids stämpling. Fått till det men vill byta till UTC tid och fixa formatet i utskriften för det var millisekunder med, och det känns överflödigt. 
 
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
