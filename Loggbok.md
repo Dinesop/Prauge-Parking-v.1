@@ -140,6 +140,11 @@ Okej, satt och försökte få det att funka på en annan dator och spectre conso
 Och jag märker att jag tappat rutinen från mitt förrförra jobb att undvika mellanslag i filnamn.
 Men efter lite fipplande med att få spectre console installerat på en annan dator och mindre justeringar i koden, en kod rad behövdes tas bort, så funkar det på en annan dator med. Nu ska vi testa på en annan person med. 
 
+Användarfeedback: Varför återgår den inte till huvudmenyn automatiskt? Måste input ha # i sig? Starkare skilland mellan grönt och gult, rött för fulla platser, numrerade p-platser i visualiseringen? Att trycka escape för att komma tillbaka för att undvika att fastna om man trycker fel. Han hittade en bugg! När man skriver in flytta till nr 69 så säger den att den är full men sen står 69 i listan av lediga pplatser. Någonstans har vi ett index fel. Också flytta så tomma p-platser skrivs ut innan man erbjuds flytta till tom p-plats
+Ev bugg runt att flytta till plats 13? 
+Programmet skriver ut "parkerad i mindre än en minut" på alla nu
+2 fordon med samma bokstäver men olika siffror lades in men bara 1 dyker upp om man söker på partiellt regnr. 
+
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
  - ctrl+H för variabelnamn byte
