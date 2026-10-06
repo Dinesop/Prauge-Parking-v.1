@@ -144,6 +144,7 @@ Användarfeedback: Varför återgår den inte till huvudmenyn automatiskt? Måst
 Ev bugg runt att flytta till plats 13? 
 Programmet skriver ut "parkerad i mindre än en minut" på alla nu
 2 fordon med samma bokstäver men olika siffror lades in men bara 1 dyker upp om man söker på partiellt regnr. 
+För nästa version - meny vid sidan av visualiseringen samt lediga platser visas vid sidan av 
 
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
