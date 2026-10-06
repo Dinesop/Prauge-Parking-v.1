@@ -122,6 +122,19 @@ Såg över min kommentering av koden och förbättrade det lite. Och ser nu hur 
 ##### Kväll
 Alltså, herregud. Sitter och ska lägga till tidsstämpel och bland det första jag skrev i projektet var ju metod för att lägga till fordon och sortera fordon och nu när jag tittar på det igen så är det bara att skaka på huvudet åt mig själv. Varför har jag tagit en sträng och sen delat den? Eller ja, jag vet varför, tänkte inte på Contains eller RegEx.IsMatch då och det står som tips i instruktionen att .Split eller .Join var användbart så hade det lättillgängligt. Men det känns ju omständigt så här i efterhand... Samtidigt, var det behändigt nu när jag skulle implementera datum och tids stämpling. Fått till det men vill byta till UTC tid och fixa formatet i utskriften för det var millisekunder med, och det känns överflödigt. 
 
+### 6/10 
+Började sätta mig med UTC tiden igen och kände snabbt att jag inte alls var med på noterna, så fick fråga Gemini. Har aktivt försökt undvika både AI och att söka efter parkeringsgarage relaterade lösningar för att verkligen maxa lärandet och förståelsen, och det tror jag har varit bra men ibland får man ta lite genvägar. Minns nämligen när jag satt och lekte runt i C# i sommras att det var viktigt att ha tid i UTC, men jag vill fortfarande visa i lokal tid, så klart. Har jobbat med datorer som behövde ha sin klocka inställd på UTC tid pga vissa program, och avskydde att kolla på klockan och vara 1-2 timmar fel. Och fördelen med AI är ju att man kan bolla på ett helt annat sätt än man kan med StackOverflow eller Microsoft Learn. Sen blir det alltid en hel del felsökning när man frågar AI, vilket jag av någon anledning stör mig mer på än om jag själv måste felsöka min egna kod. 
+
+Fick error när jag försökte plocka ut ett fordon jag precis lagt till så testade att byta från DateTime.ParseExact till TryParse och det verkar funka, dock får man en negativ tid om man parkerar i mindre än en minut. Så får testa try catch kanske. 
+Och såg att min beläggningsrapport inte var så snygg med alla # och tidsstämplar nu så det får vi fixa med. Det ledde mig till min mc optimierings metod som jag behövde sätta mig in i igen. Variabel namn som tempArray är verkligen inte bra praxis. Och denna gången kom jag ihåg att använda ctrl + H. Och la till lite kommentarer. 
+
+Nu läste jag i instruktionerna att "En lista som visar vilka regnr och fordonstyper som finns på vilken plats är minimum." och medan jag tycker att min färgtabell är otroligt överskådlig och snygg så vet jag inte om det räcker så övervägde ett kort tag att bara lägga till en utskriven lista, eftersom det är *minimum* men det hade ju inte varit lika **snyggt** som om man kunde växla tabellen mellan färg och utskriva fordonsIDn, som jag hade från början. Synd bara att jag slängt den koden. Hitta en liten kodsnippet i mitt Git repository som tur var. 
+Och så ändrar man något som man tänker ska funka och så krashcar programmet. Då får man börja felsöka med debuggern - okej, min sträng blir tom, varför blir den det - ah, det är en tom p-plats, ja det måste vi ju kunna hantera. Så får man snickra ihop något runt det. 
+Men nu funkar det, skulle dock behöva ändra kolumnbredden för att texten ska passa snyggare, vilket innebär att vi behöver ändra på färgtabellen med. Nu ska vi spara först och pusha upp till GitHub innan vi börjar med dumheter.
+Okej, nu blir det nog inte bättre. Jag förstår inte hur jag får fönstret att bli större utan att användaren själv måste förstora det med. Har fipplat runt med Console.SetWindowSize och det gör ytan jag kan utnyttja större men själva rutan som öppnas är samma så det ser konstigt ut om man inte manuellt drar upp det till helskärm. Det verkar bara gå att göra genom att ladda ner massa extra .dll filer som känns lite utanför uppgiftens bredd, så jag lägger bara in en liten text om att köra fullskärm för bästa upplevelse. 
+Skulle egentligen vilja ha en metod för tabell setup men vet inte ens om det är möjligt? Hur skulle det ens gå till? Testade lite snabbt och ja, det blir väldigt konstigt med all variabelaccess så som programmet är uppbyggt nu. 
+
+
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
  - ctrl+H för variabelnamn byte
@@ -130,3 +143,4 @@ Alltså, herregud. Sitter och ska lägga till tidsstämpel och bland det första
  - Något som haffar identiska regnr
  - Ett digitalt flödesschema som uppdateras under projektets gång.
  - Kolla efter hårdkodade värden och ändra så allt är på formen .Lenght, .GetLength etc samt att undvika hårdkodade variabel storlekar.
+ - Bli bättre på att använda Git branches för delmål.
