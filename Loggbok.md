@@ -150,24 +150,29 @@ Användarfeedback:
 4) Numrerade p-platser i visualiseringen?
     - Bra ide, fixar om jag hinner. 
 5) Att trycka escape för att komma tillbaka för att undvika att fastna om man trycker fel.
-    - Bra ide,
+    - Bra ide, försökte få till det men det blev snabbt komplext då man måste hantera key och string datatyper, konvertera console keyInfo till string osv. Det får bli ett om jag hinner projekt.
 6) Han hittade en bugg! När man skriver in flytta till nr 69 så säger den att den är full men sen står 69 i listan av lediga pplatser. Någonstans har vi ett index fel.
     - Löst, hade missat ett +1 i hittaTommaPlatser metoden.
 8) Också flytta så tomma p-platser skrivs ut innan man erbjuds flytta till tom p-plats
     - Löst.
 10) Programmet skriver ut "parkerad i mindre än en minut" på alla nu.
-     - Akut bugg att fixa.
+     - Akut bugg att fixa - Löst
 12) 2 fordon med samma bokstäver men olika siffror lades in men bara 1 dyker upp om man söker på partiellt regnr.
      - Hög prio på att lösa, men buggar går först.
 13) För nästa version - meny vid sidan av visualiseringen samt lediga platser visas vid sidan av.
 
+### 7/10
+Fixade en del snabba saker från feedbacken igår innan lektionen imorse och satte mig nu med det lite köttigare momenten. Plot twist - min try catch funkar, det är min dateTime.parse som inte funkar. Efter lite fipplande så insåg jag att om man faktiskt läser felmeddelandet så står det att det är ett formatteringproblem, så fixade och då funkde det.
+Satte mig att försöka lösa punkt nr 12 vilket expanderade till list syntax vilket nu har lett mig till att inse att jag behöver dela på menyval4, flytta fordon och hämta ut fordon då de använder samma kod i början.
+
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
- - ctrl+H för variabelnamn byte
+ - ctrl+R+R för variabelnamn byte
  - Skriv loggbok eller prata med en kodanka
  - Bygg in en avsluta knapp direkt, du vet att du kommer vilja ha en.
  - Något som haffar identiska regnr
  - Ett digitalt flödesschema som uppdateras under projektets gång.
  - Kolla efter hårdkodade värden och ändra så allt är på formen .Lenght, .GetLength etc samt att undvika hårdkodade variabel storlekar.
  - Bli bättre på att använda Git branches för delmål.
- - Inga mellanslag i filnamn
+ - Inga mellanslag i filnamn!
+ - Att trycka escape för att komma tillbaka till huvudmenyn.
