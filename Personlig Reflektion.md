@@ -22,8 +22,9 @@ Ah, min loop leder till NullExceptions. Hur löser jag det? Nästlad if sats?
 		Japp, det var så enkelt.
 Vid ett tillfälle ville jag ändra min flytta fordon metod och satt med det bara för att inse att det inte är rimligt att lägga mer tid på det just nu, och slängde all kod och gick tillbaka till det jag hade innan som fungerade. 
 Jag har fortfarande inte löst hur man får konsol fönstret att byta storlek utan att gå långt utanför min egna kunskap.
+Jag hade problem med datum och tids implementeringen och la in en try catch som jag sen trodde inte funkade, men det var tydligen min DateTime.Parse som inte funkade istället. 
 ## Metoder och modeller som använts för att lösa uppgiften
-Jag har byggt 16 egna metoder, som borde varit fler kan jag säga så här i efterhand. De har ibland in och eller output, och ligger alla samlade i botten av min kod, tydligt utmärkta.
+Jag har byggt 16 egna metoder, som borde varit fler kan jag säga så här i efterhand. De har ibland in och eller output, och ligger alla samlade i botten av min kod, tydligt utmärkta, den längst ner är äldst, och den längst upp är nyast. Dock har jag ibland lagt till kod i befintliga metoder, så de har ju utvecklats under projektets gång med.
 Inbyggda metoder jag använt är bland annat ReadKey, Write, WriteLine, ReadLine, ToUpper, IsNullOrEmpty, Contains, Add. Jag har även använt en lista, på ett ställe, för att jag var lite lat vid tillfället, och ville bara kunna använda en .Add istället för att hålla på och fippla med vektorindex. Allting hade ju varit lättare om man haft en lista istället för en vektor men det var specificerat att det skulle vara en vektor som bas och då har det fått vara så. 
 Jag har även använt RegEx med IsMatch och Spectre.Console med dess inbyggda tabell och stapeldiagram metoder.
 ## Hur du skulle lösa uppgiften nästa gång, givet vad du vet nu
