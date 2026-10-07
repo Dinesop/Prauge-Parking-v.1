@@ -140,11 +140,26 @@ Okej, satt och försökte få det att funka på en annan dator och spectre conso
 Och jag märker att jag tappat rutinen från mitt förrförra jobb att undvika mellanslag i filnamn.
 Men efter lite fipplande med att få spectre console installerat på en annan dator och mindre justeringar i koden, en kod rad behövdes tas bort, så funkar det på en annan dator med. Nu ska vi testa på en annan person med. 
 
-Användarfeedback: Varför återgår den inte till huvudmenyn automatiskt? Måste input ha # i sig? Starkare skilland mellan grönt och gult, rött för fulla platser, numrerade p-platser i visualiseringen? Att trycka escape för att komma tillbaka för att undvika att fastna om man trycker fel. Han hittade en bugg! När man skriver in flytta till nr 69 så säger den att den är full men sen står 69 i listan av lediga pplatser. Någonstans har vi ett index fel. Också flytta så tomma p-platser skrivs ut innan man erbjuds flytta till tom p-plats
-Ev bugg runt att flytta till plats 13? 
-Programmet skriver ut "parkerad i mindre än en minut" på alla nu
-2 fordon med samma bokstäver men olika siffror lades in men bara 1 dyker upp om man söker på partiellt regnr. 
-För nästa version - meny vid sidan av visualiseringen samt lediga platser visas vid sidan av 
+Användarfeedback: 
+1) Varför återgår den inte till huvudmenyn automatiskt?
+    - Designval så personalen ska hinna skriva ner eventuella instruktioner.
+2) Måste input ha # i sig?
+    - I denna version behöver man det.
+3) Starkare skilland mellan grönt och gult, rött för fulla platser?
+    - Löst
+4) Numrerade p-platser i visualiseringen?
+    - Bra ide, fixar om jag hinner. 
+5) Att trycka escape för att komma tillbaka för att undvika att fastna om man trycker fel.
+    - Bra ide,
+6) Han hittade en bugg! När man skriver in flytta till nr 69 så säger den att den är full men sen står 69 i listan av lediga pplatser. Någonstans har vi ett index fel.
+    - Löst, hade missat ett +1 i hittaTommaPlatser metoden.
+8) Också flytta så tomma p-platser skrivs ut innan man erbjuds flytta till tom p-plats
+    - Löst.
+10) Programmet skriver ut "parkerad i mindre än en minut" på alla nu.
+     - Akut bugg att fixa.
+12) 2 fordon med samma bokstäver men olika siffror lades in men bara 1 dyker upp om man söker på partiellt regnr.
+     - Hög prio på att lösa, men buggar går först.
+13) För nästa version - meny vid sidan av visualiseringen samt lediga platser visas vid sidan av.
 
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
