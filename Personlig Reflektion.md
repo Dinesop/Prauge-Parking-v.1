@@ -1,0 +1,44 @@
+# Personlig reflektion
+## Sammanfattning
+Jag har fört en detaljerad loggbok med mycket av mina tankar och reflektioner under projektets gång. Mycket av det jag skriver här är baserat på den så det kommer bli lite upprepning om man läser båda. Jag tycker uppgiften har varit väldigt rolig och lärorik och är mer sugen på att sitta med liknande småprojekt än övningsuppgifter så kommer skifta fokus lite mer åt det hållet framöver. Uppgiften löstes genom att bryta ner i allt mindre bitar och försöka lösa varje liten bit efter bästa förmåga och kunskap. Har valt att skriva om en del bitar utefter att behov eller kunskap utökats men också valt att släppa en del saker som hade kunnat förbättras på grund av tidsbegränsningen. Problemen jag stött på har skiftat från enkla syntax och nybörjarmisstag till lite mer komplexa problem, även om jag fortfarande springer in i de enklare problemen med. 
+Jag är väldigt nöjd med hur jag löst uppgiften och mitt resultat, dels för att jag aktivt försökt undvika att använda AI eller kolla på liknande uppgifters lösningsförslag, men också för hur mycket jag lärt mig och alla problem jag har löst på vägen. 
+## Hur jag löste uppgiften
+Jag började med att försöka göra ett flödesschema över hur jag tänkte att programmet skulle se ut, men efter 2 versioner av det så insåg jag att jag kan för lite för att göra ett flödesschema från scratch. Men kände upprepade gånger under projektets gång att det hade varit hjälpsamt att ha ett flödesschema för att se hur allt hängde ihop. Så min plan för nästa projekt är att ha ett digitalt flödesschema som man kan uppdatera under projektets gång. 
+Jag hade också läst att det är klokt att specificera projektet innan man startar det så jag satt och funderade på hur man kan bryta ner det i sina minsta beståndsdelar. Och det visade sig vara registreringsnummer in, p-plats ut.  Jag lutade mig också emot den struktur som presenterats i föreläsningarna: Specifikation, Design, Implementation, Test & Debug och Driftsättning. 
+Sen visste jag hur jag ville att menyn skulle se ut, så utgick från den och byggde en metod för menydisplay och en metod för menyval. 
+Jag började sen med att skriva kod för att lägga till bilar och sen visste jag att jag behövde kunna söka efter bilar både för menyval 2, 3 och 4, så det blev nästa steg. Sen från sökfunktionen byggde jag metoder för att flytta och hämta ut bilar. 
+När allt var på plats för bilar började jag med MC parkering. Först att bara parkera MC, men eftersom jag visste att jag ville kunna parkera 2 MCs på samma p-plats behövde den skilja sig från bil parkering. Efter lite tricksande med RegEx och logiska uttryck fick jag till det. Jag hade föredragit ett mer lättläst logiskt uttryck än ´Regex.IsMatch(parkingGarage[i], "^[^|]*$"´, men det får bli för nästa projekt. 
+Sen var allt klart för G och först då började jag titta på VG uppgifterna. Visualiseringen hade jag redan en idé för hur jag ville att det skulle se ut, men kämpade ganska länge med att få till det som jag ville ha det. Testade många, många olika sätt, men landade till sist i ett som var nära nog min vision för att vara acceptabelt. Vi har ju en deadline och jag måste hinna med att ta mig igenom lektionsmaterialet också så någonstans måste man till sist släppa saker och lägga i en hög jag döpt till ”Om det finns tid/ till nästa projekt”. Användarinput säkring gick fort men det är nog mer för att jag inte kan tillräckligt för att vara kreativ i att säkra upp det. Är helt övertygad om att det finns massor av väldigt uppenbara säkerhetshål jag inte tänkt på.  Nu har jag bara tidsstämpling kvar, och där har jag ändå en okej uppfattning om hur det ska implementeras så det borde gå relativt smidigt.
+## Utmaningar i uppgiften och hur de löstes
+Först var problemen väldigt basal, det var mycket syntax och små misstag för att man inte förstår eller inte kommer ihåg alla fasetter av programspråket:
+•	Varför klagar den på mitt använde av .ToUpper ? 
+Oj jag har glömt paranteserna i slutet. och liknande syntax problem. 
+•	Varför fungerar inte min if sats helt plötsligt?
+Oj, jag bytte visst variabelnamn manuellt och missade en variabel.
+Sen började det sätta sig (och jag hade kod att kopiera/skriva av) och då blev problemen lite mer komplexa med lite krashar och felaktiga logiska uttryck: 
+Varför kraschar programmet? 
+Ah, min loop leder till NullExceptions. Hur löser jag det? Nästlad if sats? 
+	Nej. Om jag testar byta plats på statements?
+		Japp, det var så enkelt.
+Vid ett tillfälle ville jag ändra min flytta fordon metod och satt med det bara för att inse att det inte är rimligt att lägga mer tid på det just nu, och slängde all kod och gick tillbaka till det jag hade innan som fungerade. 
+Jag har fortfarande inte löst hur man får konsol fönstret att byta storlek utan att gå långt utanför min egna kunskap.
+Jag hade problem med datum och tids implementeringen och la in en try catch som jag sen trodde inte funkade, men det var tydligen min DateTime.Parse som inte funkade istället. 
+## Metoder och modeller som använts för att lösa uppgiften
+Jag har byggt 16 egna metoder, som borde varit fler kan jag säga så här i efterhand. De har ibland in och eller output, och ligger alla samlade i botten av min kod, tydligt utmärkta, den längst ner är äldst, och den längst upp är nyast. Dock har jag ibland lagt till kod i befintliga metoder, så de har ju utvecklats under projektets gång med.
+Inbyggda metoder jag använt är bland annat ReadKey, Write, WriteLine, ReadLine, ToUpper, IsNullOrEmpty, Contains, Add. Jag har även använt en lista, på ett ställe, för att jag var lite lat vid tillfället, och ville bara kunna använda en .Add istället för att hålla på och fippla med vektorindex. Allting hade ju varit lättare om man haft en lista istället för en vektor men det var specificerat att det skulle vara en vektor som bas och då har det fått vara så. 
+Jag har även använt RegEx med IsMatch och Spectre.Console med dess inbyggda tabell och stapeldiagram metoder.
+## Hur du skulle lösa uppgiften nästa gång, givet vad du vet nu
+Jag hade sett till att all utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
+Jag hade kommit ihåg att använda ctrl+H för variabelnamn byte.
+Jag hade byggt in en avsluta knapp direkt, istället för att tänka på det och sedan lägga det på högen av saker jag tar om jag hinner med, två gånger. 
+Jag hade byggt något som haffar identiska regnr.
+Jag hade satt upp ett digitalt flödesschema som uppdateras under projektets gång.
+Jag hade delat upp mina metoder ännu mer, verkligen försökt att hålla mig till att en metod ska göra en och endast en sak. 
+
+## Slutsats hemuppgift
+Jag tycker uppgiften varit otroligt rolig – att få sätta sig och bygga något större, med flera bitar som ska passa ihop och som måste justeras allt eftersom man utökar konceptet och så vidare, har varit så kul. Började känna mig ganska trött på övningsuppgifterna då de, av förklarliga skäl, är väldigt simpla och man ska bygga en liten grej för att etablera ett litet koncept. Fullt begripligt men inte så roligt efter 8 lektioner, framför allt eftersom det hittills har täckt mycket av det jag kunnat sen innan. Men att få sitta och pilla med flera olika rörliga bitar, hitta förbättringar, 
+Jag har tyckt det varit otroligt hjälpsamt att skriva loggbok och är något jag kommer fortsätta med, eftersom många av problemet jag stött på har lösts genom att jag skrivit om dom i loggboken. Det har sparat mig mycket möda och frustration.  
+## Slutsats kurs, så här långt
+Tycker kursen varit bra, när jag hade gått igenom alla föreläsningar som låg innan inlämningsuppgiften kändes det ändå hanterbart att ta sig an den. Man förstod grundprinciperna som gjorde att man kunde bygga ihop något som faktiskt fungerade.
+Känner att inlämningsuppgift 2 är helt obegriplig i dagsläget men hoppas att det också klarnar när vi kommer dit och jag tagit mig an det materialet som vi går igenom inför den.
+Jag personligen har blivit lite less på övningsuppgifterna och börjat fundera på hur jag ska ta mig an resten av kursen då jag varit helt besatt av inlämningsuppgiften så tänker jag att det inte är programmering i sig som är problemet utan att jag är lite trött på att skriva väldigt enkla program som bara gör något litet. Men vissa av dagens övningsuppgifter var lite mer komplexa och gav mig en ide till ett litet enkelt spel som jag ska försöka få tid att knåpa ihop. Ska också helt skippa de gröna uppgifterna om jag inte känner att jag har svårt för de gula, då de äter upp dyrbar pluggtid som jag hellre lägger på annat mer relevant och givande. Det är det fina med detta upplägget, även om jag saknar att ha lärare i klassrum föreläsningar, så ger detta upplägg mig mer frihet att anpassa efter min nivå och mina förutsättningar. 
