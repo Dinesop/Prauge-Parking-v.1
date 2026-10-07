@@ -23,13 +23,13 @@ Systemet ska vara en textbaserad meny.
 
 ### För VG 
 Två av följande ska göras:
- - [ ] Visualisera vad som finns på parkeringsplatsen.
+ - [x] Visualisera vad som finns på parkeringsplatsen.
  - [x] Skapa en optimeringrutin.
  - [x] Säkra upp användarinput.
- - [ ] Utöka lagringsformatet.
+ - [x] Utöka lagringsformatet.
 
 ##### Personlig reflektion 
-Skapa en personlig reflektion över kursen och projektet på ca 3 sidor. 
+ - [x] Skapa en personlig reflektion över kursen och projektet på ca 3 sidor. 
 1. Sammanfattning
 2. Hur jag löste uppgiften
 3. Utmaningar i uppgiften och hur de löstes
