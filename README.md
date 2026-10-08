@@ -12,8 +12,7 @@ Där efter skriver man `dotnet add package Spectre.Console`
  - [x] Manuellt flytta fordon.
  - [x] Hämta ut fordon och ta bort det ur systemet.
  - [x] Söka efter fordon.
-
-Systemet ska vara en textbaserad meny.
+ - [x] Systemet ska vara en textbaserad meny.
 
 ### Tekniska krav
  - [x] Identifiering av fordon sker genom registreringsnummer.
@@ -21,8 +20,7 @@ Systemet ska vara en textbaserad meny.
  - [x] Det finns 100 parkeringsrutor
  - [x] Parkeringsrutorna är numrerade 1 - 100.
  - [x] En parkeringsruta kan innehålla 1 bil eller upp till 2 motorcyklar.
-
-**OBS glöm inte att testköra på en annan dator!**
+ - [x] Testköra på en annan dator.
 
 ### För VG 
 Två av följande ska göras:
