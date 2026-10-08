@@ -164,9 +164,14 @@ Användarfeedback:
 ### 7/10
 Fixade en del snabba saker från feedbacken igår innan lektionen imorse och satte mig nu med det lite köttigare momenten. Plot twist - min try catch funkar, det är min dateTime.parse som inte funkar. Efter lite fipplande så insåg jag att om man faktiskt läser felmeddelandet så står det att det är ett formatteringproblem, så fixade och då funkde det.
 Satte mig att försöka lösa punkt nr 12 vilket expanderade till list syntax vilket nu har lett mig till att inse att jag behöver dela på menyval4, flytta fordon och hämta ut fordon då de använder samma kod i början.
+
 ### 8/10
+##### Morgon
 Trodde jag var klar imorse men spenderat hela dagen med att fixa saker. 
 Fortsätt med att kolla varför optimeringsrutinen gått sönder igen. Skriv en bättre dagsrapport.
+
+##### Kväll
+Nu ska jag inte pilla mer, allting fungerade äntligen vid test på min partners dator och allting har fungerat på min dator. Har suttit hela dagen och försökt fixa det ena efter det andra bara för att ha något annat gå sönder. Jag och Linnea satt och bollade varför min avsluta funktion inte ville fungera en bra stund med. Nu lägger vi detta till handlingarna och skickar in det.
 
 ## Att göra om tid / lärdomar till nästa gång:
  - All utskrift sker i en specifik funktion som läser in output från de andra funktionerna och baserat på en switch meny skriver ut olika saker på skärmen.
