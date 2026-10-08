@@ -1,7 +1,10 @@
-Första inlämningsuppgiften i C#
+# Första inlämningsuppgiften i Objektorienterad programmering C#
 Bygg en applikation som hanterar bilar och motorcyklar.
 
-**Systemet behöver inte kunna spara bilar över natten. När programmet avslutas raderas all data.**
+## Innan du kör applikationen
+Applikationen använder Spectre.Console för vissa av dess funktioner och det behöver vara installerat innan applikationen körs.
+Detta görs enklast genom att ladda ner repositoryt, öppna kommandotolken och ställa dig i mappen där projektet ligger: `cd <file_path>`
+Där efter skriver man `dotnet add package Spectre.Console`
 
 ### Krav på systemet
  - [x] Ta emot fordon.
@@ -13,11 +16,11 @@ Bygg en applikation som hanterar bilar och motorcyklar.
 Systemet ska vara en textbaserad meny.
 
 ### Tekniska krav
- - Identifiering av fordon sker genom registreringsnummer.
- - Registreringsnumrena är alltid strängar med en maxlängd på 10 tecken.
- - Det finns 100 parkeringsrutor
- - Parkeringsrutorna är numrerade 1 - 100.
- - En parkeringsruta kan innehålla 1 bil eller upp till 2 motorcyklar.
+ - [x] Identifiering av fordon sker genom registreringsnummer.
+ - [x] Registreringsnumrena är alltid strängar med en maxlängd på 10 tecken.
+ - [x] Det finns 100 parkeringsrutor
+ - [x] Parkeringsrutorna är numrerade 1 - 100.
+ - [x] En parkeringsruta kan innehålla 1 bil eller upp till 2 motorcyklar.
 
 **OBS glöm inte att testköra på en annan dator!**
 
@@ -30,10 +33,3 @@ Två av följande ska göras:
 
 ##### Personlig reflektion 
  - [x] Skapa en personlig reflektion över kursen och projektet på ca 3 sidor. 
-1. Sammanfattning
-2. Hur jag löste uppgiften
-3. Utmaningar i uppgiften och hur de löstes
-4. Metoder och modeller som använts för att lösa uppgiften
-5. Hur du skulle lösa uppgiften nästa gång, givet vad du vet nu
-6. Slutsats hemuppgift
-7. Slutsats kurs, så här långt
