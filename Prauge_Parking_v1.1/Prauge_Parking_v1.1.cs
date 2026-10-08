@@ -1,4 +1,4 @@
-﻿using Spectre.Console;
+using Spectre.Console;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Net.NetworkInformation;
@@ -124,8 +124,8 @@ while (powerSwitch)
 }
 
 // ****************************** METODER ***************************************//
-void menyVal4()
-{ // Kod snippet för menyval 4.
+void sökaEfterFordon()
+{ // Kod snippet för att söka efter fordon.
 
     string input = taEmotRegNr();
     List<int> i = genomsökaPhus(input);
@@ -134,7 +134,7 @@ void menyVal4()
     {
         Console.WriteLine();
         Console.WriteLine("Tyvärr finns inte fordonet i vårt system, kontrollera angivet registeringsnummer.");
-        menyVal4();
+        sökaEfterFordon();
     }
     else if (i.Count > 1) // Om det finns mer än ett fordon med angivet regnr.
     {
@@ -164,7 +164,7 @@ void menyVal4()
         }
         Console.WriteLine();
         Console.WriteLine("Var god specificera vilket av dom du eftersöker:");
-        menyVal4();
+        sökaEfterFordon();
     }
     else
     {
@@ -528,7 +528,7 @@ void flyttaFordon()
             platsIndex = angePPlats();
         }
 
-        else if (Regex.IsMatch(parkingGarage[index], "^[^|]*$")) //Om p-platsen inte innehåller 2 st MC
+        if (Regex.IsMatch(parkingGarage[index], "^[^|]*$")) //Om p-platsen inte innehåller 2 st MC
         {
             parkingGarage[platsIndex] = parkingGarage[index];
             parkingGarage[index] = "";
@@ -833,7 +833,7 @@ void menyVal(int valdMenyPunkt)
             break;
 
         case 4:
-            menyVal4();
+            sökaEfterFordon();
             break;
         case 5:
             optimeraMcParkering();
